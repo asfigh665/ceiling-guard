@@ -1,0 +1,47 @@
+\begin{table}[htbp]
+\centering
+\caption{Ceiling--Regret diagnosis on disjoint replication splits (\%).}
+\label{tab:hard}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.16}
+\sbox{\resulttablebox}{%
+\begin{tabular}{llrrrr}
+\toprule
+
+\rowcolor{tablehead}
+Setting & Protocol & $n$ & Loss & Comp. & $\Delta A$ [95\% CI] \\
+\midrule
+\textbf{MATH-rep.} & Unguided & 200 & $13.0$ & $0.5$ & $-12.5$ [-18.5,-6.5] \\
+ & Ideal-info & 200 & $3.0$ & $2.5$ & $-0.5$ [-7.0,+6.0] \\
+ & Calib. & 199 & $3.0$ & $1.5$ & $-1.5$ [-7.0,+4.0] \\
+\midrule
+\textbf{MMLU-rep.} & Unguided & 238 & $8.4$ & $10.1$ & $+1.7$ [-4.6,+8.0] \\
+ & Ideal-info & 238 & $4.6$ & $10.5$ & $+5.9$ [-0.4,+12.2] \\
+ & Calib. & 239 & $7.1$ & $11.3$ & $+4.2$ [-1.3,+9.6] \\
+\bottomrule
+\end{tabular}}
+\ifdim\wd\resulttablebox>\columnwidth
+\resizebox{\columnwidth}{!}{\usebox{\resulttablebox}}
+\else
+\setlength{\tabcolsep}{\dimexpr 2.5pt+(\columnwidth-\wd\resulttablebox)/12\relax}
+\begin{tabular}{llrrrr}
+\toprule
+
+\rowcolor{tablehead}
+Setting & Protocol & $n$ & Loss & Comp. & $\Delta A$ [95\% CI] \\
+\midrule
+\textbf{MATH-rep.} & Unguided & 200 & $13.0$ & $0.5$ & $-12.5$ [-18.5,-6.5] \\
+ & Ideal-info & 200 & $3.0$ & $2.5$ & $-0.5$ [-7.0,+6.0] \\
+ & Calib. & 199 & $3.0$ & $1.5$ & $-1.5$ [-7.0,+4.0] \\
+\midrule
+\textbf{MMLU-rep.} & Unguided & 238 & $8.4$ & $10.1$ & $+1.7$ [-4.6,+8.0] \\
+ & Ideal-info & 238 & $4.6$ & $10.5$ & $+5.9$ [-0.4,+12.2] \\
+ & Calib. & 239 & $7.1$ & $11.3$ & $+4.2$ [-1.3,+9.6] \\
+\bottomrule
+\end{tabular}
+\fi
+\endgroup
+
+\end{table}

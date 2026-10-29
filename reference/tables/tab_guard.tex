@@ -1,0 +1,45 @@
+\begin{table}[htbp]
+\centering
+\caption{Readout accuracy and candidate-preservation ablations (\%).}
+\label{tab:guard}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.16}
+\sbox{\resulttablebox}{%
+\begin{tabular}{lrrr>{\columncolor{guardhighlight}}rrr}
+\toprule
+ & \multicolumn{4}{c}{Readout accuracy} & \multicolumn{2}{c}{Coverage / test} \\\cmidrule(lr){2-5}\cmidrule(l){6-7}
+\rowcolor{tablehead}
+Setting & Post & Post-w & Union & \textbf{Guard} & $\Delta C_U$ & $p_H$ \\
+\midrule
+MATH-500 & $41.0$ & $43.3$ & $\underline{48.0}$ & $\mathbf{53.3\,(\uparrow 12.3)}$ & $11.0$ & $<0.001$ \\
+MMLU-Pro & $52.0$ & $51.3$ & $\underline{53.0}$ & $\mathbf{54.7\,(\uparrow 2.7)}$ & $14.7$ & $0.134$ \\
+GSM8K & $51.9$ & $56.3$ & $\underline{81.9}$ & $\mathbf{88.1\,(\uparrow 36.3)}$ & $10.6$ & $<0.001$ \\
+\midrule
+MATH-rep. & $30.5$ & $31.5$ & $\underline{38.0}$ & $\mathbf{41.5\,(\uparrow 11.0)}$ & $15.0$ & $<0.001$ \\
+MMLU-rep. & $51.3$ & $\underline{52.9}$ & $\underline{52.9}$ & $\mathbf{57.1\,(\uparrow 5.9)}$ & $13.9$ & $0.009$ \\
+\bottomrule
+\end{tabular}}
+\ifdim\wd\resulttablebox>\columnwidth
+\resizebox{\columnwidth}{!}{\usebox{\resulttablebox}}
+\else
+\setlength{\tabcolsep}{\dimexpr 2.5pt+(\columnwidth-\wd\resulttablebox)/14\relax}
+\begin{tabular}{lrrr>{\columncolor{guardhighlight}}rrr}
+\toprule
+ & \multicolumn{4}{c}{Readout accuracy} & \multicolumn{2}{c}{Coverage / test} \\\cmidrule(lr){2-5}\cmidrule(l){6-7}
+\rowcolor{tablehead}
+Setting & Post & Post-w & Union & \textbf{Guard} & $\Delta C_U$ & $p_H$ \\
+\midrule
+MATH-500 & $41.0$ & $43.3$ & $\underline{48.0}$ & $\mathbf{53.3\,(\uparrow 12.3)}$ & $11.0$ & $<0.001$ \\
+MMLU-Pro & $52.0$ & $51.3$ & $\underline{53.0}$ & $\mathbf{54.7\,(\uparrow 2.7)}$ & $14.7$ & $0.134$ \\
+GSM8K & $51.9$ & $56.3$ & $\underline{81.9}$ & $\mathbf{88.1\,(\uparrow 36.3)}$ & $10.6$ & $<0.001$ \\
+\midrule
+MATH-rep. & $30.5$ & $31.5$ & $\underline{38.0}$ & $\mathbf{41.5\,(\uparrow 11.0)}$ & $15.0$ & $<0.001$ \\
+MMLU-rep. & $51.3$ & $\underline{52.9}$ & $\underline{52.9}$ & $\mathbf{57.1\,(\uparrow 5.9)}$ & $13.9$ & $0.009$ \\
+\bottomrule
+\end{tabular}
+\fi
+\endgroup
+
+\end{table}

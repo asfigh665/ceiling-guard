@@ -1,0 +1,43 @@
+\begin{table}[htbp]
+\centering
+\caption{Evaluation sizes and calibration accuracies (\%).}
+\label{tab:setup}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.16}
+\sbox{\resulttablebox}{%
+\begin{tabular}{lrrrrr}
+\toprule
+ & \multicolumn{2}{c}{Items} & \multicolumn{3}{c}{Calibration accuracy} \\\cmidrule(lr){2-3}\cmidrule(l){4-6}
+\rowcolor{tablehead}
+Setting & Cal. $n$ & Eval. $n$ & Qwen & Llama & Mistral \\
+\midrule
+MATH-500 & 64 & 150 & 54.7 & 45.3 & 7.8 \\
+MMLU-Pro & 64 & 150 & 32.8 & 26.6 & 21.9 \\
+GSM8K & 40 & 160 & 85.0 & 87.5 & 5.0 \\
+MATH-rep. & 50 & 199--200 & 44.0 & 44.0 & 4.0 \\
+MMLU-rep. & 60 & 238--239 & 20.0 & 15.0 & 10.0 \\
+\bottomrule
+\end{tabular}}
+\ifdim\wd\resulttablebox>\columnwidth
+\resizebox{\columnwidth}{!}{\usebox{\resulttablebox}}
+\else
+\setlength{\tabcolsep}{\dimexpr 2.5pt+(\columnwidth-\wd\resulttablebox)/12\relax}
+\begin{tabular}{lrrrrr}
+\toprule
+ & \multicolumn{2}{c}{Items} & \multicolumn{3}{c}{Calibration accuracy} \\\cmidrule(lr){2-3}\cmidrule(l){4-6}
+\rowcolor{tablehead}
+Setting & Cal. $n$ & Eval. $n$ & Qwen & Llama & Mistral \\
+\midrule
+MATH-500 & 64 & 150 & 54.7 & 45.3 & 7.8 \\
+MMLU-Pro & 64 & 150 & 32.8 & 26.6 & 21.9 \\
+GSM8K & 40 & 160 & 85.0 & 87.5 & 5.0 \\
+MATH-rep. & 50 & 199--200 & 44.0 & 44.0 & 4.0 \\
+MMLU-rep. & 60 & 238--239 & 20.0 & 15.0 & 10.0 \\
+\bottomrule
+\end{tabular}
+\fi
+\endgroup
+
+\end{table}

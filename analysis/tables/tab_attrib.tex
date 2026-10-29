@@ -1,0 +1,43 @@
+\begin{table}[htbp]
+\centering
+\caption{Sequential contributions of preservation and calibration (\%).}
+\label{tab:attrib}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.16}
+\sbox{\resulttablebox}{%
+\begin{tabular}{lrrrrrr}
+\toprule
+
+\rowcolor{tablehead}
+Setting & $\Delta C_U$ & Union & Weights & Total [95\% CI] & Share & $p_H$ \\
+\midrule
+MATH-500 & $11.0$ & $7.0$ & $5.3$ & $12.3$ [+7.7,+17.0] & 57 & $<0.001$ \\
+MMLU-Pro & $14.7$ & $1.0$ & $1.7$ & $2.7$ [-0.3,+5.7] & 38 & $0.134$ \\
+GSM8K & $10.6$ & $30.0$ & $6.3$ & $36.3$ [+28.8,+44.4] & 83 & $<0.001$ \\
+MATH-rep. & $15.0$ & $7.5$ & $3.5$ & $11.0$ [+6.5,+15.5] & 68 & $<0.001$ \\
+MMLU-rep. & $13.9$ & $1.7$ & $4.2$ & $5.9$ [+2.1,+9.7] & 29 & $0.009$ \\
+\bottomrule
+\end{tabular}}
+\ifdim\wd\resulttablebox>\columnwidth
+\resizebox{\columnwidth}{!}{\usebox{\resulttablebox}}
+\else
+\setlength{\tabcolsep}{\dimexpr 2.5pt+(\columnwidth-\wd\resulttablebox)/14\relax}
+\begin{tabular}{lrrrrrr}
+\toprule
+
+\rowcolor{tablehead}
+Setting & $\Delta C_U$ & Union & Weights & Total [95\% CI] & Share & $p_H$ \\
+\midrule
+MATH-500 & $11.0$ & $7.0$ & $5.3$ & $12.3$ [+7.7,+17.0] & 57 & $<0.001$ \\
+MMLU-Pro & $14.7$ & $1.0$ & $1.7$ & $2.7$ [-0.3,+5.7] & 38 & $0.134$ \\
+GSM8K & $10.6$ & $30.0$ & $6.3$ & $36.3$ [+28.8,+44.4] & 83 & $<0.001$ \\
+MATH-rep. & $15.0$ & $7.5$ & $3.5$ & $11.0$ [+6.5,+15.5] & 68 & $<0.001$ \\
+MMLU-rep. & $13.9$ & $1.7$ & $4.2$ & $5.9$ [+2.1,+9.7] & 29 & $0.009$ \\
+\bottomrule
+\end{tabular}
+\fi
+\endgroup
+
+\end{table}

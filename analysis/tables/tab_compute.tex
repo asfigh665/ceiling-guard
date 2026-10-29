@@ -1,0 +1,43 @@
+\begin{table}[htbp]
+\centering
+\caption{Guard versus nine-call Qwen self-consistency (\%).}
+\label{tab:compute}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.16}
+\sbox{\resulttablebox}{%
+\begin{tabular}{lr>{\columncolor{guardhighlight}}rrr}
+\toprule
+
+\rowcolor{tablehead}
+Setting & $n$ & Guard & SC $k=9$ & Difference [95\% CI] \\
+\midrule
+MATH-500 & 150 & 53.3 & 63.3 & -10.0 [-15.7,-4.7] \\
+MMLU-Pro & 150 & 54.7 & 55.3 & -0.7 [-7.7,+6.7] \\
+GSM8K & 160 & 88.1 & 91.3 & -3.1 [-8.1,+1.9] \\
+MATH-rep. & 200 & 41.5 & 52.5 & -11.0 [-16.5,-6.0] \\
+MMLU-rep. & 238 & 57.1 & 59.2 & -2.1 [-8.4,+4.2] \\
+\bottomrule
+\end{tabular}}
+\ifdim\wd\resulttablebox>\columnwidth
+\resizebox{\columnwidth}{!}{\usebox{\resulttablebox}}
+\else
+\setlength{\tabcolsep}{\dimexpr 2.5pt+(\columnwidth-\wd\resulttablebox)/10\relax}
+\begin{tabular}{lr>{\columncolor{guardhighlight}}rrr}
+\toprule
+
+\rowcolor{tablehead}
+Setting & $n$ & Guard & SC $k=9$ & Difference [95\% CI] \\
+\midrule
+MATH-500 & 150 & 53.3 & 63.3 & -10.0 [-15.7,-4.7] \\
+MMLU-Pro & 150 & 54.7 & 55.3 & -0.7 [-7.7,+6.7] \\
+GSM8K & 160 & 88.1 & 91.3 & -3.1 [-8.1,+1.9] \\
+MATH-rep. & 200 & 41.5 & 52.5 & -11.0 [-16.5,-6.0] \\
+MMLU-rep. & 238 & 57.1 & 59.2 & -2.1 [-8.4,+4.2] \\
+\bottomrule
+\end{tabular}
+\fi
+\endgroup
+
+\end{table}

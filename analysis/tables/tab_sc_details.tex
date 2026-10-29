@@ -1,0 +1,55 @@
+\begin{table}[htbp]
+\centering
+\caption{Guard versus self-consistency on paired items (\%).}
+\label{tab:sc_details}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.16}
+\sbox{\resulttablebox}{%
+\begin{tabular}{llrrrrrrr}
+\toprule
+
+\rowcolor{tablehead}
+Setting & SC member & $k$ & $n$ & Guard & SC & Difference [95\% CI] & $p$ & $p_H$ \\
+\midrule
+MATH-500 & Qwen & 3 & 150 & 53.3 & 57.3 & -4.0 [-9.7,+1.3] & $0.196$ & $0.196$ \\
+ & Qwen & 9 & 150 & 53.3 & 63.3 & -10.0 [-15.7,-4.7] & $<0.001$ & $0.001$ \\
+\midrule
+MMLU-Pro & Qwen & 9 & 150 & 54.7 & 55.3 & -0.7 [-7.7,+6.7] & $0.929$ & --- \\
+ & Llama & 9 & 150 & 54.7 & 60.7 & -6.0 [-12.7,+0.7] & $0.108$ & --- \\
+\midrule
+GSM8K & Qwen & 9 & 160 & 88.1 & 91.3 & -3.1 [-8.1,+1.9] & $0.359$ & --- \\
+\midrule
+MATH-rep. & Qwen & 9 & 200 & 41.5 & 52.5 & -11.0 [-16.5,-6.0] & $<0.001$ & --- \\
+\midrule
+MMLU-rep. & Qwen & 9 & 238 & 57.1 & 59.2 & -2.1 [-8.4,+4.2] & $0.603$ & --- \\
+\bottomrule
+\end{tabular}}
+\ifdim\wd\resulttablebox>\columnwidth
+\resizebox{\columnwidth}{!}{\usebox{\resulttablebox}}
+\else
+\setlength{\tabcolsep}{\dimexpr 2.5pt+(\columnwidth-\wd\resulttablebox)/18\relax}
+\begin{tabular}{llrrrrrrr}
+\toprule
+
+\rowcolor{tablehead}
+Setting & SC member & $k$ & $n$ & Guard & SC & Difference [95\% CI] & $p$ & $p_H$ \\
+\midrule
+MATH-500 & Qwen & 3 & 150 & 53.3 & 57.3 & -4.0 [-9.7,+1.3] & $0.196$ & $0.196$ \\
+ & Qwen & 9 & 150 & 53.3 & 63.3 & -10.0 [-15.7,-4.7] & $<0.001$ & $0.001$ \\
+\midrule
+MMLU-Pro & Qwen & 9 & 150 & 54.7 & 55.3 & -0.7 [-7.7,+6.7] & $0.929$ & --- \\
+ & Llama & 9 & 150 & 54.7 & 60.7 & -6.0 [-12.7,+0.7] & $0.108$ & --- \\
+\midrule
+GSM8K & Qwen & 9 & 160 & 88.1 & 91.3 & -3.1 [-8.1,+1.9] & $0.359$ & --- \\
+\midrule
+MATH-rep. & Qwen & 9 & 200 & 41.5 & 52.5 & -11.0 [-16.5,-6.0] & $<0.001$ & --- \\
+\midrule
+MMLU-rep. & Qwen & 9 & 238 & 57.1 & 59.2 & -2.1 [-8.4,+4.2] & $0.603$ & --- \\
+\bottomrule
+\end{tabular}
+\fi
+\endgroup
+
+\end{table}

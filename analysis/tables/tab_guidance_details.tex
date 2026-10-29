@@ -1,0 +1,61 @@
+\begin{table}[htbp]
+\centering
+\caption{Calibration guidance versus unguided discussion (\%).}
+\label{tab:guidance_details}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.16}
+\sbox{\resulttablebox}{%
+\begin{tabular}{llrrr}
+\toprule
+
+\rowcolor{tablehead}
+Setting & Outcome & $n$ & Difference [95\% CI] & $p$ \\
+\midrule
+MATH-500 & Pre/post change & 150 & $-0.3$ [-7.3,+6.7] & $1.000$ \\
+ & Final accuracy & 150 & $+1.7$ [-4.0,+7.3] & $0.646$ \\
+\midrule
+MMLU-Pro & Pre/post change & 150 & $+6.3$ [-0.3,+13.3] & $0.090$ \\
+ & Final accuracy & 150 & $+5.0$ [-1.0,+10.7] & $0.120$ \\
+\midrule
+GSM8K & Pre/post change & 160 & $+23.8$ [+14.4,+33.8] & $<0.001$ \\
+ & Final accuracy & 160 & $+23.1$ [+14.4,+31.9] & $<0.001$ \\
+\midrule
+MATH-rep. & Pre/post change & 199 & $+11.1$ [+4.0,+18.1] & $0.004$ \\
+ & Final accuracy & 199 & $+8.5$ [+2.5,+14.6] & $0.008$ \\
+\midrule
+MMLU-rep. & Pre/post change & 238 & $+2.5$ [-5.0,+10.1] & $0.595$ \\
+ & Final accuracy & 238 & $+5.0$ [-1.3,+11.8] & $0.169$ \\
+\bottomrule
+\end{tabular}}
+\ifdim\wd\resulttablebox>\columnwidth
+\resizebox{\columnwidth}{!}{\usebox{\resulttablebox}}
+\else
+\setlength{\tabcolsep}{\dimexpr 2.5pt+(\columnwidth-\wd\resulttablebox)/10\relax}
+\begin{tabular}{llrrr}
+\toprule
+
+\rowcolor{tablehead}
+Setting & Outcome & $n$ & Difference [95\% CI] & $p$ \\
+\midrule
+MATH-500 & Pre/post change & 150 & $-0.3$ [-7.3,+6.7] & $1.000$ \\
+ & Final accuracy & 150 & $+1.7$ [-4.0,+7.3] & $0.646$ \\
+\midrule
+MMLU-Pro & Pre/post change & 150 & $+6.3$ [-0.3,+13.3] & $0.090$ \\
+ & Final accuracy & 150 & $+5.0$ [-1.0,+10.7] & $0.120$ \\
+\midrule
+GSM8K & Pre/post change & 160 & $+23.8$ [+14.4,+33.8] & $<0.001$ \\
+ & Final accuracy & 160 & $+23.1$ [+14.4,+31.9] & $<0.001$ \\
+\midrule
+MATH-rep. & Pre/post change & 199 & $+11.1$ [+4.0,+18.1] & $0.004$ \\
+ & Final accuracy & 199 & $+8.5$ [+2.5,+14.6] & $0.008$ \\
+\midrule
+MMLU-rep. & Pre/post change & 238 & $+2.5$ [-5.0,+10.1] & $0.595$ \\
+ & Final accuracy & 238 & $+5.0$ [-1.3,+11.8] & $0.169$ \\
+\bottomrule
+\end{tabular}
+\fi
+\endgroup
+
+\end{table}

@@ -1,0 +1,3 @@
+Validated with Python 3.9.17, NumPy 1.24.4, and SciPy 1.9.3.
+243 independent checks passed. All aggregate results and five manuscript tables match the frozen references.
+36 original input files are preserved byte for byte.

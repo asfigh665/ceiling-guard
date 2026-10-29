@@ -1,0 +1,55 @@
+\begin{table}[htbp]
+\centering
+\caption{Ceiling--Regret diagnosis on the main evaluation splits (\%).}
+\label{tab:tradeoff}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.16}
+\sbox{\resulttablebox}{%
+\begin{tabular}{llrrr}
+\toprule
+
+\rowcolor{tablehead}
+Setting & Protocol & Loss & Comp. & $\Delta A$ [95\% CI] \\
+\midrule
+\textbf{MATH-500} & Unguided & $6.3$ & $4.0$ & $-2.3$ [-8.7,+4.0] \\
+ & Ideal-info & $5.3$ & $6.3$ & $+1.0$ [-5.3,+7.3] \\
+ & Calib. & $6.7$ & $4.0$ & $-2.7$ [-8.0,+2.7] \\
+\midrule
+\textbf{MMLU-Pro} & Unguided & $11.0$ & $11.3$ & $+0.3$ [-6.0,+6.3] \\
+ & Ideal-info & $11.0$ & $13.7$ & $+2.7$ [-2.7,+8.0] \\
+ & Calib. & $8.0$ & $14.7$ & $+6.7$ [+1.3,+12.0] \\
+\midrule
+\textbf{GSM8K} & Unguided & $8.1$ & $-26.9$ & $-35.0$ [-43.1,-26.9] \\
+ & Ideal-info & $6.9$ & $-2.5$ & $-9.4$ [-16.3,-2.5] \\
+ & Calib. & $5.6$ & $-5.6$ & $-11.3$ [-18.1,-5.0] \\
+\bottomrule
+\end{tabular}}
+\ifdim\wd\resulttablebox>\columnwidth
+\resizebox{\columnwidth}{!}{\usebox{\resulttablebox}}
+\else
+\setlength{\tabcolsep}{\dimexpr 2.5pt+(\columnwidth-\wd\resulttablebox)/10\relax}
+\begin{tabular}{llrrr}
+\toprule
+
+\rowcolor{tablehead}
+Setting & Protocol & Loss & Comp. & $\Delta A$ [95\% CI] \\
+\midrule
+\textbf{MATH-500} & Unguided & $6.3$ & $4.0$ & $-2.3$ [-8.7,+4.0] \\
+ & Ideal-info & $5.3$ & $6.3$ & $+1.0$ [-5.3,+7.3] \\
+ & Calib. & $6.7$ & $4.0$ & $-2.7$ [-8.0,+2.7] \\
+\midrule
+\textbf{MMLU-Pro} & Unguided & $11.0$ & $11.3$ & $+0.3$ [-6.0,+6.3] \\
+ & Ideal-info & $11.0$ & $13.7$ & $+2.7$ [-2.7,+8.0] \\
+ & Calib. & $8.0$ & $14.7$ & $+6.7$ [+1.3,+12.0] \\
+\midrule
+\textbf{GSM8K} & Unguided & $8.1$ & $-26.9$ & $-35.0$ [-43.1,-26.9] \\
+ & Ideal-info & $6.9$ & $-2.5$ & $-9.4$ [-16.3,-2.5] \\
+ & Calib. & $5.6$ & $-5.6$ & $-11.3$ [-18.1,-5.0] \\
+\bottomrule
+\end{tabular}
+\fi
+\endgroup
+
+\end{table}

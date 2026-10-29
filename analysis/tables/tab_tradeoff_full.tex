@@ -1,0 +1,55 @@
+\begin{table}[htbp]
+\centering
+\caption{Ceiling--Regret diagnosis on the main evaluation splits (\%).}
+\label{tab:tradeoff_full}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.16}
+\sbox{\resulttablebox}{%
+\begin{tabular}{lllrrrrr}
+\toprule
+
+\rowcolor{tablehead}
+Setting & Protocol & $n$ & $\Delta A$ [95\% CI] & Loss & Regret & Compression & $p$ \\
+\midrule
+\textbf{MATH-500} & Unguided & 150 & $-2.3$ [-8.7,+4.0] & $6.3$ & $14.3$ & $4.0$ & $0.535$ \\
+ & Ideal-info & 150 & $+1.0$ [-5.3,+7.3] & $5.3$ & $12.3$ & $6.3$ & $0.837$ \\
+ & Calibration & 150 & $-2.7$ [-8.0,+2.7] & $6.7$ & $12.0$ & $4.0$ & $0.405$ \\
+\midrule
+\textbf{MMLU-Pro} & Unguided & 150 & $+0.3$ [-6.0,+6.3] & $11.0$ & $13.3$ & $11.3$ & $1.000$ \\
+ & Ideal-info & 150 & $+2.7$ [-2.7,+8.0] & $11.0$ & $12.0$ & $13.7$ & $0.391$ \\
+ & Calibration & 150 & $+6.7$ [+1.3,+12.0] & $8.0$ & $10.0$ & $14.7$ & $0.024$ \\
+\midrule
+\textbf{GSM8K} & Unguided & 160 & $-35.0$ [-43.1,-26.9] & $8.1$ & $35.6$ & $-26.9$ & $<0.001$ \\
+ & Ideal-info & 160 & $-9.4$ [-16.3,-2.5] & $6.9$ & $14.4$ & $-2.5$ & $0.014$ \\
+ & Calibration & 160 & $-11.3$ [-18.1,-5.0] & $5.6$ & $15.6$ & $-5.6$ & $0.002$ \\
+\bottomrule
+\end{tabular}}
+\ifdim\wd\resulttablebox>\columnwidth
+\resizebox{\columnwidth}{!}{\usebox{\resulttablebox}}
+\else
+\setlength{\tabcolsep}{\dimexpr 2.5pt+(\columnwidth-\wd\resulttablebox)/16\relax}
+\begin{tabular}{lllrrrrr}
+\toprule
+
+\rowcolor{tablehead}
+Setting & Protocol & $n$ & $\Delta A$ [95\% CI] & Loss & Regret & Compression & $p$ \\
+\midrule
+\textbf{MATH-500} & Unguided & 150 & $-2.3$ [-8.7,+4.0] & $6.3$ & $14.3$ & $4.0$ & $0.535$ \\
+ & Ideal-info & 150 & $+1.0$ [-5.3,+7.3] & $5.3$ & $12.3$ & $6.3$ & $0.837$ \\
+ & Calibration & 150 & $-2.7$ [-8.0,+2.7] & $6.7$ & $12.0$ & $4.0$ & $0.405$ \\
+\midrule
+\textbf{MMLU-Pro} & Unguided & 150 & $+0.3$ [-6.0,+6.3] & $11.0$ & $13.3$ & $11.3$ & $1.000$ \\
+ & Ideal-info & 150 & $+2.7$ [-2.7,+8.0] & $11.0$ & $12.0$ & $13.7$ & $0.391$ \\
+ & Calibration & 150 & $+6.7$ [+1.3,+12.0] & $8.0$ & $10.0$ & $14.7$ & $0.024$ \\
+\midrule
+\textbf{GSM8K} & Unguided & 160 & $-35.0$ [-43.1,-26.9] & $8.1$ & $35.6$ & $-26.9$ & $<0.001$ \\
+ & Ideal-info & 160 & $-9.4$ [-16.3,-2.5] & $6.9$ & $14.4$ & $-2.5$ & $0.014$ \\
+ & Calibration & 160 & $-11.3$ [-18.1,-5.0] & $5.6$ & $15.6$ & $-5.6$ & $0.002$ \\
+\bottomrule
+\end{tabular}
+\fi
+\endgroup
+
+\end{table}

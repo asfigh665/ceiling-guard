@@ -1,0 +1,20 @@
+Benchmark sources
+
+MATH-500: the MATH-500 evaluation subset of the MATH benchmark.
+MMLU-Pro: MMLU-Pro benchmark questions and answer options.
+GSM8K: the GSM8K test split; the exact source URL is recorded in
+analysis/data/manifest_v4.json.
+
+Benchmark material and model responses retain their existing terms. This
+archive does not assign a new license to third-party material. Dataset names,
+question identifiers, model names, and research prompts are retained for
+reproducibility. No model weights are included.
+
+Upstream sources and license information:
+- MATH: https://github.com/hendrycks/math
+- MATH-500: https://huggingface.co/datasets/HuggingFaceH4/MATH-500
+- MMLU-Pro: https://github.com/TIGER-AI-Lab/MMLU-Pro
+- GSM8K: https://github.com/openai/grade-school-math
+
+The repository's MIT license applies to original source code only; it does
+not replace the upstream terms of benchmark content or archived responses.
